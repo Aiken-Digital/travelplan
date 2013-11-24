@@ -1,0 +1,349 @@
+.masthead {
+	position:fixed;
+	top:0;
+	left:0;
+	padding:12px 0;
+	width:100vw;
+	background:#f6d228;
+	opacity:.95;
+}
+
+section.offset {
+	position:absolute;
+	left:220px;
+}
+
+.masthead.offset {
+	left:220px;
+}
+
+/* NAV */
+#menu {
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+	width:0;
+	height:100vh;
+	background:#222;
+	color:#fff;
+}
+
+#user {
+	padding:32px 16px 24px;
+}
+
+#menu h3 {
+	color:#fff;
+	margin-top:6px;
+}
+
+#menu.active {
+	display:block!important;
+	width:220px!important;
+}
+
+.display-pic {
+	float:left;
+	width:50px;
+	height:50px;
+}
+
+.display-name,.home-country {
+	float:left;
+	padding-left:16px;
+}
+
+.nav {
+	clear:both;
+	padding-top:32px;
+}
+
+li.nav-item {
+	padding:12px 16px;
+	font-size:16px;
+}
+
+li.nav-item.active,li.nav-item:hover {
+	background:#444;
+}
+
+/* LOGIN */
+#login,#splash {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+	width:100vw;
+	height:100vh;
+	background:#f6d228;
+}
+
+/* DESTINATION */
+#destination {
+	padding-top:26px;
+}
+
+.ui-autocomplete {
+	position:absolute;
+	left: 0 !important;
+	overflow-y:scroll;
+	padding:0;
+	width:100vw !important;
+	max-height:350px;
+	border-top:1px solid #d8d8d8;
+	border-bottom:1px solid #d8d8d8;
+	background-color:#fff;
+	list-style:none;
+}
+
+.ui-menu-item {
+	padding:0;
+}
+
+.ui-autocomplete .ui-menu-item a {
+	display:block;
+	padding:8px 28px;
+	border-top:1px solid #d8d8d8;
+	color:#555;
+	cursor:pointer;
+}
+
+.ui-autocomplete .ui-menu-item:first-child a {
+	border-top:none;
+}
+
+.ui-autocomplete .ui-menu-item a.ui-state-hover {
+	background-color:#f8f8f8;
+}
+
+/* FLIGHTS */
+.outbound .banner, .return .banner{
+	padding:4px 0;
+	color:white;
+	font-weight:700;
+}
+
+.route {
+	padding:48px 40px 24px;
+	width:100%;
+	background:#333;
+	color:rgba(255, 255, 255, 0.75);
+	font-size:12px;
+	margin-top:-42px;
+}
+
+.route.taipei {
+	padding-top:100px;
+	background: url(../img/taipei.jpg) 0 -16px;
+	background-size:100%;
+	margin-top:-94px;
+}
+
+.origin, .destination {
+	display:inline-block;
+}
+
+.destination {
+	float:right;
+}
+
+.origin {
+	float:left;
+}
+
+h1#country-code {
+	margin-bottom:-4px;
+	color:white;
+	text-transform:uppercase;
+	font-weight:300;
+	font-size:36px;
+}
+
+.origin #origin-location, .destination #destination-location {
+	display:block;
+	font-size:9px;
+}
+
+.icon-plane {
+	display: inline-block;
+	margin-left: 28px;
+	width:55px;
+	height:72px;
+	background: url(../img/icon-plane.png) no-repeat center;
+	background-size:55px;
+}
+
+.flights {
+	padding-top:16px;
+	padding-bottom:16px;
+}
+
+.box {
+	margin-bottom:16px;
+	border-radius:2px;
+	background:white;
+}
+
+.box > .pad {
+	background:#F3F2EB;
+}
+
+.box hr, .box > hr {
+	margin:0;
+	border-top: #eee 1px dashed !important;
+}
+
+.airline-logo-airasia {
+	display:inline-block;
+	width:45px;
+	height:20px;
+	background: url(../img/airlines/logo-airasia.png) no-repeat;
+	background-size:45px;
+}
+
+.airline-logo-cathay {
+	display:inline-block;
+	width:64px;
+	height:22px;
+	background: url(../img/airlines/logo-cathay.png) no-repeat;
+	background-size:64px;
+}
+
+.airline-logo-tigerair {
+	display:inline-block;
+	width:45px;
+	height:20px;
+	background: url(../img/airlines/logo-tigerair.png) no-repeat 0 3px;
+	background-size:45px;
+}
+
+.airticket-price {
+	line-height:0.3;
+}
+
+.flight-details {
+	padding:24px 0 16px;
+}
+
+ .flight-details:before,
+ .flight-details:after {
+	 display: table;
+	 content: " ";
+ }
+ 
+ .flight-details:after {
+	 clear: both;
+ }
+
+.fds {
+	float:left;
+	width:33.3333333%;
+}
+
+.transit.direct {
+	display:block;
+	margin:0 auto;
+	width:60px;
+	height:30px;
+	background: url(../img/icon-direct.png) no-repeat;
+	background-size:60px;
+}
+
+.transit.stopover {
+	display:block;
+	margin:0 auto;
+	width:60px;
+	height:30px;
+	background: url(../img/icon-onestop.png) no-repeat;
+	background-size:60px;
+}
+
+/* ACTIVITIES */
+.day-or-night {
+background: #FFF;
+padding: 8px 0 4px;
+}
+
+h3.place, h3.hotel-name {
+	margin-bottom:2px;
+	display:inline-block;
+}
+
+.heart {
+	float:right;
+	cursor:pointer; 
+}
+
+.heart.liked {
+	color:#ef5355;
+}
+
+.activity-image {
+width: 100%;
+margin-bottom:8px;
+}
+
+.box.activity {
+	margin-bottom:0 !important;
+	border-bottom:#eee 1px dashed;
+	padding:16px;
+}
+
+/* ACCOMODATION */
+
+.hotel-image, .it-image {
+	width:100%;
+	margin-bottom:-8px;
+	border-radius:2px 2px 0 0;
+}
+
+.hotel-details.pad {
+	background:white !important;
+}
+
+.star, .map {
+	font-size:15px !important;
+	display:inline-block !important;
+	margin-right:2px;
+}
+
+.star {
+	color:#f6d228 !important;
+}
+
+/* ITENARARY */
+.date-banner {
+	background:#333;
+	color:white;
+}
+
+.date-day {
+	text-align:center;
+	color:white;
+}
+
+.date-date {
+	text-align:center;
+	color:white;
+}
+
+label.stamp {
+	color:#35A6C2;
+	font-weight:700;
+	margin-bottom:8px;
+	font-size:12px;
+	display:block;
+}
+
+.next-day {
+	color:white;
+	float:right;
+	position: relative;
+top: -26px;
+font-size: 16px;
+}
+
+.add-remove-it {
+	margin-top:72px;
+}
