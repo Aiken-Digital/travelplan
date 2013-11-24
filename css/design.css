@@ -68,16 +68,21 @@ li.nav-item.active,li.nav-item:hover {
 	background:#444;
 }
 
-/* LOGIN */
-#login,#splash {
-	position:absolute;
-	top:0;
-	left:0;
-	display:none;
-	width:100vw;
-	height:100vh;
-	background:#f6d228;
+/* TRIPS */
+#trips {
+	background:white
 }
+
+.trip-item {
+	border-bottom: 1px #eee dashed;
+}
+
+.trip-item:last-child {
+	border-bottom: 0;
+}
+
+.trip-name{
+padding:10px 0 0 10px;}
 
 /* DESTINATION */
 #destination {
@@ -189,9 +194,13 @@ h1#country-code {
 	background:#F3F2EB;
 }
 
-.box hr,.box > hr {
+.box hr,.box > hr, hr.dashed {
 	margin:0;
 	border-top:#eee 1px dashed!important;
+}
+
+hr.dashed {
+	margin:12px 0 !important;
 }
 
 .airline-logo-airasia {
@@ -350,4 +359,34 @@ label.stamp {
 	top:21px;
 	position:absolute;
 	float:left;
+}
+
+.fds-a {
+	width:44%;
+	float:left;
+	text-align:center;
+}
+
+.fds-a > h5 {
+	margin-bottom:16px;
+}
+
+.fds-b {
+	width:11%;
+	float:left;
+}
+
+.fds-b > p {
+		text-align:center;
+font-weight: 700;
+font-size: 16px;
+}
+
+.fds-b > p:first-child {
+margin-bottom:24px;
+		color: #58C026;
+}
+
+.fds-b > p:last-child {
+		color: #ef5355;
 }

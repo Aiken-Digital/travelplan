@@ -1782,6 +1782,11 @@ img {
 	border-radius: 2px;
 }
 
+.button-small {
+	width: 78px;
+	padding:2px
+}
+
 .button:hover {
 	color:white;
 	background:#3197B1;
