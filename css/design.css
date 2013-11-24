@@ -3,7 +3,7 @@
 	top:0;
 	left:0;
 	padding:12px 0;
-	width:100vw;
+	width:100%;
 	background:#f6d228;
 	opacity:.95;
 }
@@ -13,9 +13,67 @@ section.offset {
 	left:220px;
 }
 
+section:not(.hide) {
+	display: block !important;
+}
+
 .masthead.offset {
 	left:220px;
 }
+
+.masthead nav a {
+	position: relative;
+	top: 6px;
+	color: white;
+}
+
+.masthead nav [class*=nav-] {
+	display: none;
+}
+
+  .masthead nav.open-trips .nav-trips {
+  	display: block;
+  }
+
+  .masthead nav.open-trips-post .nav-trips-post {
+  	display: block;
+  }
+
+  .masthead nav.open-destination .nav-destination {
+  	display: block;
+  }
+
+	.masthead nav.open-flights .nav-flights {
+  	display: block;
+  }
+
+  .masthead nav.open-recommendations .nav-recommendations {
+  	display: block;
+  }
+
+  .masthead nav.open-hotels .nav-hotels {
+  	display: block;
+  }
+
+  .masthead nav.open-itinerary .nav-itinerary {
+  	display: block;
+  }
+
+  .masthead nav.open-summary .nav-summary {
+  	display: block;
+  }
+
+  .masthead nav a:last-child {
+  	position: relative;
+		left: -15px;
+  }
+
+  .masthead .icon-plus,
+  .masthead .icon-menu {
+  	position: relative;
+		top: -6px;
+  }
+
 
 /* NAV */
 #menu {
@@ -94,7 +152,7 @@ padding:10px 0 0 10px;}
 	left:0!important;
 	overflow-y:scroll;
 	padding:0;
-	width:100vw!important;
+	width:100%!important;
 	max-height:350px;
 	border-top:1px solid #d8d8d8;
 	border-bottom:1px solid #d8d8d8;
