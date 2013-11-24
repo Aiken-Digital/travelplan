@@ -34,8 +34,8 @@ section.offset {
 }
 
 #menu h3 {
-	color:#fff;
 	margin-top:6px;
+	color:#fff;
 }
 
 #menu.active {
@@ -86,10 +86,10 @@ li.nav-item.active,li.nav-item:hover {
 
 .ui-autocomplete {
 	position:absolute;
-	left: 0 !important;
+	left:0!important;
 	overflow-y:scroll;
 	padding:0;
-	width:100vw !important;
+	width:100vw!important;
 	max-height:350px;
 	border-top:1px solid #d8d8d8;
 	border-bottom:1px solid #d8d8d8;
@@ -118,29 +118,29 @@ li.nav-item.active,li.nav-item:hover {
 }
 
 /* FLIGHTS */
-.outbound .banner, .return .banner{
+.outbound .banner,.return .banner {
 	padding:4px 0;
-	color:white;
+	color:#fff;
 	font-weight:700;
 }
 
 .route {
+	margin-top:-42px;
 	padding:48px 40px 24px;
 	width:100%;
 	background:#333;
-	color:rgba(255, 255, 255, 0.75);
+	color:rgba(255,255,255,0.75);
 	font-size:12px;
-	margin-top:-42px;
 }
 
 .route.taipei {
-	padding-top:100px;
-	background: url(../img/taipei.jpg) 0 -16px;
-	background-size:100%;
 	margin-top:-94px;
+	padding-top:100px;
+	background:url(../img/taipei.jpg) 0 -16px;
+	background-size:100%;
 }
 
-.origin, .destination {
+.origin,.destination {
 	display:inline-block;
 }
 
@@ -154,23 +154,23 @@ li.nav-item.active,li.nav-item:hover {
 
 h1#country-code {
 	margin-bottom:-4px;
-	color:white;
+	color:#fff;
 	text-transform:uppercase;
 	font-weight:300;
 	font-size:36px;
 }
 
-.origin #origin-location, .destination #destination-location {
+.origin #origin-location,.destination #destination-location {
 	display:block;
 	font-size:9px;
 }
 
 .icon-plane {
-	display: inline-block;
-	margin-left: 28px;
+	display:inline-block;
+	margin-left:28px;
 	width:55px;
 	height:72px;
-	background: url(../img/icon-plane.png) no-repeat center;
+	background:url(../img/icon-plane.png) no-repeat center;
 	background-size:55px;
 }
 
@@ -182,23 +182,23 @@ h1#country-code {
 .box {
 	margin-bottom:16px;
 	border-radius:2px;
-	background:white;
+	background:#fff;
 }
 
 .box > .pad {
 	background:#F3F2EB;
 }
 
-.box hr, .box > hr {
+.box hr,.box > hr {
 	margin:0;
-	border-top: #eee 1px dashed !important;
+	border-top:#eee 1px dashed!important;
 }
 
 .airline-logo-airasia {
 	display:inline-block;
 	width:45px;
 	height:20px;
-	background: url(../img/airlines/logo-airasia.png) no-repeat;
+	background:url(../img/airlines/logo-airasia.png) no-repeat;
 	background-size:45px;
 }
 
@@ -206,7 +206,7 @@ h1#country-code {
 	display:inline-block;
 	width:64px;
 	height:22px;
-	background: url(../img/airlines/logo-cathay.png) no-repeat;
+	background:url(../img/airlines/logo-cathay.png) no-repeat;
 	background-size:64px;
 }
 
@@ -214,27 +214,26 @@ h1#country-code {
 	display:inline-block;
 	width:45px;
 	height:20px;
-	background: url(../img/airlines/logo-tigerair.png) no-repeat 0 3px;
+	background:url(../img/airlines/logo-tigerair.png) no-repeat 0 3px;
 	background-size:45px;
 }
 
 .airticket-price {
-	line-height:0.3;
+	line-height:.3;
 }
 
 .flight-details {
 	padding:24px 0 16px;
 }
 
- .flight-details:before,
- .flight-details:after {
-	 display: table;
-	 content: " ";
- }
- 
- .flight-details:after {
-	 clear: both;
- }
+.flight-details:before,.flight-details:after {
+	display:table;
+	content:" ";
+}
+
+.flight-details:after {
+	clear:both;
+}
 
 .fds {
 	float:left;
@@ -246,7 +245,7 @@ h1#country-code {
 	margin:0 auto;
 	width:60px;
 	height:30px;
-	background: url(../img/icon-direct.png) no-repeat;
+	background:url(../img/icon-direct.png) no-repeat;
 	background-size:60px;
 }
 
@@ -255,24 +254,24 @@ h1#country-code {
 	margin:0 auto;
 	width:60px;
 	height:30px;
-	background: url(../img/icon-onestop.png) no-repeat;
+	background:url(../img/icon-onestop.png) no-repeat;
 	background-size:60px;
 }
 
 /* ACTIVITIES */
 .day-or-night {
-background: #FFF;
-padding: 8px 0 4px;
+	padding:8px 0 4px;
+	background:#FFF;
 }
 
-h3.place, h3.hotel-name {
-	margin-bottom:2px;
+h3.place,h3.hotel-name {
 	display:inline-block;
+	margin-bottom:2px;
 }
 
 .heart {
 	float:right;
-	cursor:pointer; 
+	cursor:pointer;
 }
 
 .heart.liked {
@@ -280,70 +279,75 @@ h3.place, h3.hotel-name {
 }
 
 .activity-image {
-width: 100%;
-margin-bottom:8px;
+	margin-bottom:8px;
+	width:100%;
 }
 
 .box.activity {
-	margin-bottom:0 !important;
-	border-bottom:#eee 1px dashed;
+	margin-bottom:0!important;
 	padding:16px;
+	border-bottom:#eee 1px dashed;
 }
 
 /* ACCOMODATION */
-
-.hotel-image, .it-image {
-	width:100%;
+.hotel-image,.it-image {
 	margin-bottom:-8px;
+	width:100%;
 	border-radius:2px 2px 0 0;
 }
 
 .hotel-details.pad {
-	background:white !important;
+	background:#fff!important;
 }
 
-.star, .map {
-	font-size:15px !important;
-	display:inline-block !important;
+.star,.map {
+	display:inline-block!important;
 	margin-right:2px;
+	font-size:15px!important;
 }
 
 .star {
-	color:#f6d228 !important;
+	color:#f6d228!important;
 }
 
 /* ITENARARY */
 .date-banner {
 	background:#333;
-	color:white;
+	color:#fff;
+	position:relative
 }
 
 .date-day {
+	color:#fff;
 	text-align:center;
-	color:white;
 }
 
 .date-date {
+	color:#fff;
 	text-align:center;
-	color:white;
 }
 
 label.stamp {
+	display:block;
+	margin:8px 0;
 	color:#35A6C2;
 	font-weight:700;
-	margin-bottom:8px;
 	font-size:12px;
-	display:block;
+}
+
+.next-day,.previous-day {
+	position:relative;
+	top:-26px;
+	color:#fff;
+	font-size:16px;
 }
 
 .next-day {
-	color:white;
 	float:right;
-	position: relative;
-top: -26px;
-font-size: 16px;
 }
 
-.add-remove-it {
-	margin-top:72px;
+.previous-day {
+	top:21px;
+	position:absolute;
+	float:left;
 }
