@@ -55,13 +55,70 @@
 
 
 <header class="masthead">
-	<div class="row text-center">
-		<a class="one column" id="menu-toggle"><i class="icon-menu"></i></a>
-		<h2 class="ten columns">Trips</h2>  <!-- Variable -->
-		<a class="one column">
-			<i class="icon-plus"></i>  <!-- Variable -->
-		</a> 
-	</div>
+  <nav class="open-trips">
+  	<div class="row text-center">
+
+      <!-- trip -->
+      <div class="nav-trips">
+        <a class="one column" id="menu-toggle"><i class="icon-menu"></i></a>
+        <h2 id="header-title" class="ten columns">Trips</h2>
+        <a class="one column" data-href="destination">
+          <i class="icon-plus"></i>
+        </a>
+      </div>
+      
+      <!-- trip post -->
+      <div class="nav-trips-post">
+        <a class="one column" id="menu-toggle"><i class="icon-menu"></i></a>
+        <h2 id="header-title" class="ten columns">Trips</h2>
+        <a class="one column" data-href="destination">
+          <i class="icon-plus"></i>
+        </a>
+      </div>
+
+      <!-- destination -->
+      <div class="nav-destination">
+        <a class="one column" data-href="trips">Back</a>
+        <h2 id="header-title" class="ten columns">Destination</h2>
+      </div>
+
+      <!-- flight -->
+      <div class="nav-flights">
+        <a class="one column" data-href="destination">Back</a>
+        <h2 id="header-title" class="ten columns">Flights</h2>
+        <a class="one column" data-href="recommendations">Next</a>
+      </div>
+
+      <!-- recommendations -->
+      <div class="nav-recommendations">
+        <a class="one column" data-href="flights">Back</a>
+        <h2 id="header-title" class="ten columns">Discover</h2>
+        <a class="one column" data-href="hotels">Next</a>
+      </div>
+
+      <!-- accomodation -->
+      <div class="nav-hotels">
+        <a class="one column" data-href="recommendations">Back</a>
+        <h2 id="header-title" class="ten columns">Accomodation</h2>
+        <a class="one column" data-href="itinerary">Next</a>
+      </div>
+
+      <!-- itinerary -->
+      <div class="nav-itinerary">
+        <a class="one column" data-href="hotels">Back</a>
+        <h2 id="header-title" class="ten columns">Itinerary</h2>
+        <a class="one column" data-href="summary">Next</a>
+      </div>
+
+      <!-- summary -->
+      <div class="nav-summary">
+        <a class="one column" data-href="itinerary">Back</a>
+        <h2 id="header-title" class="ten columns">Summary</h2>
+        <a class="one column" data-action="book">Book</a>
+      </div>
+
+  	</div>
+  </nav>
 </header>
 
 <aside id="menu">
@@ -82,12 +139,7 @@
 	</nav>
 </aside>
 
-<section id="splash">
-	
-</section>
-
 <section id="login">
-	
 </section>
 
 <section id="trips"> <!--TRIPS-->
@@ -105,13 +157,32 @@
 			<h4 class="gray">Batam</h4>
 		</div>
 	</div>
-	<div class="row pad trip-item">
-		<div class="columns"><img src="img/taiwan.png" class="round display-pic"></div>
-		<div class="columns trip-name">
-			<h3>SHOPPING TRIP</h3>
-			<h4 class="gray">Taipei</h4>
-		</div>
-	</div>
+</section>
+
+<section id="trips-post" class="hide"> <!--TRIPS-->
+  <div class="row pad trip-item">
+    <div class="columns"><img src="img/uk.png" class="round display-pic"></div>
+    <div class="columns trip-name">
+      <h3>HONEYMOON</h3>
+      <h4 class="gray">United Kingdom</h4>
+    </div>
+  </div>
+  <div class="row pad trip-item">
+    <div class="columns"><img src="img/indonesia.png" class="round display-pic"></div>
+    <div class="columns trip-name">
+      <h3>ORD TRIP</h3>
+      <h4 class="gray">Batam</h4>
+    </div>
+  </div>
+  <div class="row pad trip-item">
+    <a data-href="">
+      <div class="columns"><img src="img/taiwan.png" class="round display-pic"></div>
+      <div class="columns trip-name">
+        <h3>SHOPPING TRIP</h3>
+        <h4 class="gray">Taipei</h4>
+      </div>
+    </a>
+  </div>
 </section>
 
 <section id="destination" class="hide"> <!-- DESTINATION -->
@@ -379,173 +450,171 @@
     </div>
     <label>I want to fly away on</label><input id="outbound-date-input" class="input" type="date" />
     <label>And return home on</label><input class="input" type="date" />
-    <a class="button pad-top">Next <i class="icon-right-open"></i></a>
+    <a class="button pad-top" data-href="flights">Next <i class="icon-right-open"></i></a>
     <h4 class="pad text-center gray">If you don't know where to go, any road will take you there</h4>
     </form>
   	</div>
 </section>
 
-
 <section id="flights" class="hide"> <!-- FLIGHTS -->
 
   <div class="outbound">
-	<div class="banner pad-top">
-		<div class="row">
-			<span class="text-left">OUTBOUND</span>
-			<span id="outbound-date-output" class="text-right">09 DEC 2013</span>
-		</div>
-	</div>
-	<div class="route taipei">
-		<span class="origin text-center">
-			<span>ORIGIN</span>
-			<span id="origin-location"><h1 id="country-code">SIN</h1>Singapore</span>
-			</span>
-		</span>
-		<span class="icon-plane"></span>
-		<span class="destination text-center">
-			<span>DESTINATION</span>
-			<span id="destination-location"><h1 id="country-code">TPE</h1>Taipei, Taiwan</span>
-			</span>
-		</span>
-	</div>
-	<div class="row pad-top text-center">
-		<h5 class="pad-top gray">STEP 2</h5>
-		<h3 class="pad-bottom">PICK YOUR FLIGHT</h3>
-	</div>
-	
-	<div class="flights row">
-	
-		<div class="box">
-			<div class="pad">
-			<span class="airline-logo-airasia"></span>
-			<span class="airticket-price turquoise text-right">
-				<span><h3 class="turquoise">$328.00</h3></span>
-				<small>per pax</small>
-			</span>
-			</div>
-			<hr>
-			<div class="flight-details">
-				<span class="departure text-center fds"><h3 id="departure-time">8:30AM</h3><span id="country-code">SIN</span></span>
-				<span class="transit text-center fds"><span class="transit direct"></span><span id="transit-time">4h 40m</span></span>
-				<span class="arrival text-center fds"><h3 id="arrival-time">1:10PM</h3><span id="country-code">TPE</span></span>
-			</div>
-		</div>
-		
-		<div class="box">
-			<div class="pad">
-			<span class="airline-logo-airasia"></span>
-			<span class="airticket-price turquoise text-right">
-				<span><h3 class="turquoise">$388.00</h3></span>
-				<small>per pax</small>
-			</span>
-			</div>
-			<hr>
-			<div class="flight-details">
-				<span class="departure text-center fds"><h3 id="departure-time">5:30AM</h3><span id="country-code">SIN</span></span>
-				<span class="transit text-center fds"><span class="transit direct"></span><span id="transit-time">4h 40m</span></span>
-				<span class="arrival text-center fds"><h3 id="arrival-time">9:10AM</h3><span id="country-code">TPE</span></span>
-			</div>
-		</div>
-		
-		<div class="box">
-			<div class="pad">
-			<span class="airline-logo-cathay"></span>
-			<span class="airticket-price turquoise text-right">
-				<span><h3 class="turquoise">$425.00</h3></span>
-				<small>per pax</small>
-			</span>
-			</div>
-			<hr>
-			<div class="flight-details">
-				<span class="departure text-center fds"><h3 id="departure-time">1:15AM</h3><span id="country-code">SIN</span></span>
-				<span class="transit text-center fds"><span class="transit stopover"></span><span id="transit-time">9h</span></span>
-				<span class="arrival text-center fds"><h3 id="arrival-time">10:45PM</h3><span id="country-code">TPE</span></span>
-			</div>
-		</div>
+  	<div class="banner pad-top">
+  		<div class="row">
+  			<span class="text-left">OUTBOUND</span>
+  			<span id="outbound-date-output" class="text-right">09 DEC 2013</span>
+  		</div>
+  	</div>
+  	<div class="route taipei">
+  		<span class="origin text-center">
+  			<span>ORIGIN</span>
+  			<span id="origin-location"><h1 id="country-code">SIN</h1>Singapore</span>
+  			</span>
+  		</span>
+  		<span class="icon-plane"></span>
+  		<span class="destination text-center">
+  			<span>DESTINATION</span>
+  			<span id="destination-location"><h1 id="country-code">TPE</h1>Taipei, Taiwan</span>
+  			</span>
+  		</span>
+  	</div>
+  	<div class="row pad-top text-center">
+  		<h5 class="pad-top gray">STEP 2</h5>
+  		<h3 class="pad-bottom">PICK YOUR FLIGHT</h3>
+  	</div>
+  	
+  	<div class="flights row">
+  	
+  		<div class="box">
+  			<div class="pad">
+  			<span class="airline-logo-airasia"></span>
+  			<span class="airticket-price turquoise text-right">
+  				<span><h3 class="turquoise">$328.00</h3></span>
+  				<small>per pax</small>
+  			</span>
+  			</div>
+  			<hr>
+  			<div class="flight-details">
+  				<span class="departure text-center fds"><h3 id="departure-time">8:30AM</h3><span id="country-code">SIN</span></span>
+  				<span class="transit text-center fds"><span class="transit direct"></span><span id="transit-time">4h 40m</span></span>
+  				<span class="arrival text-center fds"><h3 id="arrival-time">1:10PM</h3><span id="country-code">TPE</span></span>
+  			</div>
+  		</div>
+  		
+  		<div class="box">
+  			<div class="pad">
+  			<span class="airline-logo-airasia"></span>
+  			<span class="airticket-price turquoise text-right">
+  				<span><h3 class="turquoise">$388.00</h3></span>
+  				<small>per pax</small>
+  			</span>
+  			</div>
+  			<hr>
+  			<div class="flight-details">
+  				<span class="departure text-center fds"><h3 id="departure-time">5:30AM</h3><span id="country-code">SIN</span></span>
+  				<span class="transit text-center fds"><span class="transit direct"></span><span id="transit-time">4h 40m</span></span>
+  				<span class="arrival text-center fds"><h3 id="arrival-time">9:10AM</h3><span id="country-code">TPE</span></span>
+  			</div>
+  		</div>
+  		
+  		<div class="box">
+  			<div class="pad">
+  			<span class="airline-logo-cathay"></span>
+  			<span class="airticket-price turquoise text-right">
+  				<span><h3 class="turquoise">$425.00</h3></span>
+  				<small>per pax</small>
+  			</span>
+  			</div>
+  			<hr>
+  			<div class="flight-details">
+  				<span class="departure text-center fds"><h3 id="departure-time">1:15AM</h3><span id="country-code">SIN</span></span>
+  				<span class="transit text-center fds"><span class="transit stopover"></span><span id="transit-time">9h</span></span>
+  				<span class="arrival text-center fds"><h3 id="arrival-time">10:45PM</h3><span id="country-code">TPE</span></span>
+  			</div>
+  		</div>
 
-		<div class="box">
-			<div class="pad">
-			<span class="airline-logo-tigerair"></span>
-			<span class="airticket-price turquoise text-right">
-				<span><h3 class="turquoise">$458.00</h3></span>
-				<small>per pax</small>
-			</span>
-			</div>
-			<hr>
-			<div class="flight-details">
-				<span class="departure text-center fds"><h3 id="departure-time">6:50AM</h3><span id="country-code">SIN</span></span>
-				<span class="transit text-center fds"><span class="transit stopover"></span><span id="transit-time">7h 05m</span></span>
-				<span class="arrival text-center fds"><h3 id="arrival-time">1:55PM</h3><span id="country-code">TPE</span></span>
-			</div>
-		</div>
-		
-		<h5 class="gray text-center">Load More</h5>
-	</div>
+  		<div class="box">
+  			<div class="pad">
+  			<span class="airline-logo-tigerair"></span>
+  			<span class="airticket-price turquoise text-right">
+  				<span><h3 class="turquoise">$458.00</h3></span>
+  				<small>per pax</small>
+  			</span>
+  			</div>
+  			<hr>
+  			<div class="flight-details">
+  				<span class="departure text-center fds"><h3 id="departure-time">6:50AM</h3><span id="country-code">SIN</span></span>
+  				<span class="transit text-center fds"><span class="transit stopover"></span><span id="transit-time">7h 05m</span></span>
+  				<span class="arrival text-center fds"><h3 id="arrival-time">1:55PM</h3><span id="country-code">TPE</span></span>
+  			</div>
+  		</div>
+  		
+  		<h5 class="gray text-center">Load More</h5>
+  	</div>
   </div>
   
   <div class="return pad-top">
-	<div class="banner pad-top">
-		<div class="row">
-			<span class="text-left">RETURN HOME</span>
-			<span id="outbound-date-output" class="text-right">15 DEC 2013</span>
-		</div>
-	</div>
-	<div class="route">
-		<span class="origin text-center">
-			<span>ORIGIN</span>
-			<span id="origin-location"><h1 id="country-code">TPE</h1>Taipei, Taiwan</span>
-			</span>
-		</span>
-		<span class="icon-plane"></span>
-		<span class="destination text-center">
-			<span>DESTINATION</span>
-			<span id="destination-location"><h1 id="country-code">SIN</h1>Singapore</span>
-			</span>
-		</span>
-	</div>
-	<div class="row pad-top text-center">
-		<h5 class="pad-top gray">STEP 3</h5>
-		<h3 class="pad-bottom">PICK YOUR RETURN FLIGHT</h3>
-	</div>
-	
-	<div class="flights row">
-	
-		<div class="box">
-			<div class="pad">
-			<span class="airline-logo-tigerair"></span>
-			<span class="airticket-price turquoise text-right">
-				<span><h3 class="turquoise">$413.00</h3></span>
-				<small>per pax</small>
-			</span>
-			</div>
-			<hr>
-			<div class="flight-details">
-				<span class="departure text-center fds"><h3 id="departure-time">2:50AM</h3><span id="country-code">TPE</span></span>
-				<span class="transit text-center fds"><span class="transit direct"></span><span id="transit-time">4h 45m</span></span>
-				<span class="arrival text-center fds"><h3 id="arrival-time">7:35PM</h3><span id="country-code">SIN</span></span>
-			</div>
-		</div>
-		
-		<div class="box">
-			<div class="pad">
-			<span class="airline-logo-airasia"></span>
-			<span class="airticket-price turquoise text-right">
-				<span><h3 class="turquoise">$426.00</h3></span>
-				<small>per pax</small>
-			</span>
-			</div>
-			<hr>
-			<div class="flight-details">
-				<span class="departure text-center fds"><h3 id="departure-time">11:55AM</h3><span id="country-code">TPE</span></span>
-				<span class="transit text-center fds"><span class="transit stopover"></span><span id="transit-time">8h 25m</span></span>
-				<span class="arrival text-center fds"><h3 id="arrival-time">8:20PM</h3><span id="country-code">SIN</span></span>
-			</div>
-		</div>
-				
-		<h5 class="gray text-center">Load More</h5>
-	</div>
+  	<div class="banner pad-top">
+  		<div class="row">
+  			<span class="text-left">RETURN HOME</span>
+  			<span id="outbound-date-output" class="text-right">15 DEC 2013</span>
+  		</div>
+  	</div>
+  	<div class="route">
+  		<span class="origin text-center">
+  			<span>ORIGIN</span>
+  			<span id="origin-location"><h1 id="country-code">TPE</h1>Taipei, Taiwan</span>
+  			</span>
+  		</span>
+  		<span class="icon-plane"></span>
+  		<span class="destination text-center">
+  			<span>DESTINATION</span>
+  			<span id="destination-location"><h1 id="country-code">SIN</h1>Singapore</span>
+  			</span>
+  		</span>
+  	</div>
+  	<div class="row pad-top text-center">
+  		<h5 class="pad-top gray">STEP 3</h5>
+  		<h3 class="pad-bottom">PICK YOUR RETURN FLIGHT</h3>
+  	</div>
+  	
+  	<div class="flights row">
+  	
+  		<div class="box">
+  			<div class="pad">
+  			<span class="airline-logo-tigerair"></span>
+  			<span class="airticket-price turquoise text-right">
+  				<span><h3 class="turquoise">$413.00</h3></span>
+  				<small>per pax</small>
+  			</span>
+  			</div>
+  			<hr>
+  			<div class="flight-details">
+  				<span class="departure text-center fds"><h3 id="departure-time">2:50AM</h3><span id="country-code">TPE</span></span>
+  				<span class="transit text-center fds"><span class="transit direct"></span><span id="transit-time">4h 45m</span></span>
+  				<span class="arrival text-center fds"><h3 id="arrival-time">7:35PM</h3><span id="country-code">SIN</span></span>
+  			</div>
+  		</div>
+  		
+  		<div class="box">
+  			<div class="pad">
+  			<span class="airline-logo-airasia"></span>
+  			<span class="airticket-price turquoise text-right">
+  				<span><h3 class="turquoise">$426.00</h3></span>
+  				<small>per pax</small>
+  			</span>
+  			</div>
+  			<hr>
+  			<div class="flight-details">
+  				<span class="departure text-center fds"><h3 id="departure-time">11:55AM</h3><span id="country-code">TPE</span></span>
+  				<span class="transit text-center fds"><span class="transit stopover"></span><span id="transit-time">8h 25m</span></span>
+  				<span class="arrival text-center fds"><h3 id="arrival-time">8:20PM</h3><span id="country-code">SIN</span></span>
+  			</div>
+  		</div>
+  				
+  		<h5 class="gray text-center">Load More</h5>
+  	</div>
   </div>
-  
 </section>
 
 <section id="recommendations" class="hide"> <!-- RECOMMENDATIONS -->
@@ -710,8 +779,7 @@
 		    </div>
 		</div>
 	
-	</div>
-	
+	</div>	
 </section>
 
 <section id="itinerary" class="hide"> <!-- ITINERARY -->
@@ -794,16 +862,14 @@
 					<small class="gray">No. 45, Shìfǔ Rd, Xinyi District, Taipei City</small>
 				</address>
 			</div>
-		</div>
-		
+		</div>		
 	</div>
 	
-		<div id="day2">
+	<div id="day2" class="hide">
 		<div class="date-banner pad">
 			<span class="previous-day">Previous</span>
 			<h3 class="date-day">DAY TWO</h3>
 			<h5 class="date-date">10 Dec 2013</h5>
-			<span class="next-day">Next</span>
 		</div>
 		
 		<div class="accommodation row pad-top">
@@ -878,12 +944,10 @@
 				</address>
 			</div>
 		</div>
-		
 	</div>
 </section>
 
-<section id="summary"> <!-- BOOKING SUMMARY -->
-
+<section id="summary" class="hide"> <!-- BOOKING SUMMARY -->
 	<div class="row text-center">
 		<h5 class="pad-top gray">ALMOST DONE</h5>
 		<h3 class="pad-bottom">REVIEW YOUR TRIP</h3>
@@ -909,9 +973,6 @@
 	
 	<div class="row">
 		<h3 class="pad text-center">BOOKINGS</h3>
-		<div class="row text-right">
-					<div class="airline-logo-airasia"></div>
-		</div>
 		<div class="pad box">
 			<div class="row">
 				<div class="four columns turquoise strong">Flight</div>
@@ -925,12 +986,10 @@
 			<div class="row">
 				<div class="five columns turquoise strong">Hotel</div>
 				<div class="seven columns">Amba Taipei</h3></div>
-			</div>	
+			</div>
 		</div>
-
 </section>
 
-	
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
