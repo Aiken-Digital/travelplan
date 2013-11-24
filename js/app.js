@@ -42,9 +42,4 @@
 		$("#day1").removeClass("hide");
 	});
 
-	// Book
-	$("[data-action='book']").on("click", function() {
-		alert("You have successfully book your trip. Bon Voyage");
-	});
-
 }() );

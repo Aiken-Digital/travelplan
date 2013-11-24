@@ -68,6 +68,12 @@ section:not(.hide) {
 		left: -15px;
   }
 
+  .masthead .icon-plus,
+  .masthead .icon-menu {
+  	position: relative;
+		top: -6px;
+  }
+
 
 /* NAV */
 #menu {
